@@ -236,15 +236,15 @@ const CASES = [
     desc:"55M smoker with HTN+DM, substernal chest pressure. Practice history taking, cardiac exam, ECG interpretation.",
     patientOpening:"Doctor, I've had this really bad chest pain for about 2 hours. It feels like something heavy sitting on my chest, and it goes into my left arm. I was just watching TV when it came on. I'm a bit sweaty and feel kind of sick to my stomach.",
     history:[
-      {id:"onset",phase:"History",label:"Onset & timing",keywords:["when","start","begin","how long","onset","time"],response:"It started about 2 hours ago. I was just sitting on the couch watching TV, nothing stressful or physical. It came on pretty suddenly."},
-      {id:"character",phase:"History",label:"Pain character",keywords:["character","describe","quality","feel like","what kind","type","sharp","dull","pressure"],response:"It's a heavy pressure, like an elephant sitting on my chest. It's right in the middle, behind my breastbone. I'd say it's an 8 out of 10. It also goes up into my left arm and a little into my jaw."},
-      {id:"associated",phase:"History",label:"Associated symptoms",keywords:["symptom","nausea","sweat","diaphoresis","sob","dyspnea","short of breath","vomit","dizzy"],response:"I feel nauseous, like I might throw up, but I haven't. I've been sweating a lot — my shirt is soaked. I don't feel short of breath though."},
+      {id:"onset",phase:"History",label:"Onset & timing",keywords:["when","start","begin","how long","onset","time","sudden","gradual","what happened","happen","how did","came on"],response:"It started about 2 hours ago. I was just sitting on the couch watching TV, nothing stressful or physical. It came on pretty suddenly."},
+      {id:"character",phase:"History",label:"Pain character",keywords:["character","describe","quality","feel like","what kind","type","sharp","dull","pressure","severe","severity","bad","intensity","scale","rate","out of 10","score","pain scale","how bad","how much","location","where","area","site","point","radiate","radiation","spread","go","move","show me"],response:"It's a heavy pressure, like an elephant sitting on my chest. It's right in the middle, behind my breastbone (substernal). I'd say it's an 8 out of 10 in severity. It also goes up into my left arm and a little into my jaw."},
+      {id:"associated",phase:"History",label:"Associated symptoms",keywords:["symptom","nausea","sweat","diaphoresis","sob","dyspnea","short of breath","vomit","dizzy","anything else","other symptom","also","besides","feel","how feel"],response:"I feel nauseous, like I might throw up, but I haven't. I've been sweating a lot — my shirt is soaked. I don't feel short of breath though."},
       {id:"risk",phase:"History",label:"Risk factors & PMH",keywords:["history","past","risk","hypertension","htn","diabetes","dm","smoke","medication","allergy"],response:"I've had high blood pressure and diabetes for about 10 years. I take metformin and enalapril. I've been smoking about a pack a day for 30 years. My dad had a heart attack when he was 58."},
       {id:"meds",phase:"History",label:"Medications & allergies",keywords:["medication","drug","allergy","aspirin","statin","take","pill"],response:"I take metformin 1000mg twice a day and enalapril 20mg. No allergies to medicines. I don't take anything else regularly."},
       {id:"social",phase:"History",label:"Social history",keywords:["social","drink","alcohol","job","work","live","family"],response:"I work in construction. I drink a few beers on weekends, nothing during the week. I live with my wife. We have two grown kids."}
     ],
     staffExam:[
-      {id:"vitals",phase:"Physical Exam",label:"Vital signs",keywords:["vital","bp","hr","rr","sats","temp","pulse","blood pressure"],response:"<b>Vital Signs:</b> BP 148/92 mmHg, HR 102 bpm regular, RR 20/min, SpO₂ 96% on room air, Temp 36.8°C. Patient is diaphoretic and appears anxious."},
+      {id:"vitals",phase:"Physical Exam",label:"Vital signs",keywords:["vital","bp","hr","rr","sats","temp","pulse","blood pressure","numbers","reading","pressure","oxygen","saturation","rate","fever"],response:"<b>Vital Signs:</b> BP 148/92 mmHg, HR 102 bpm regular, RR 20/min, SpO₂ 96% on room air, Temp 36.8°C. Patient is diaphoretic and appears anxious."},
       {id:"cv",phase:"Physical Exam",label:"Cardiovascular exam",keywords:["cardio","heart","jvp","murmur","apex","chest","listen","auscultation","s1","s2"],response:"<b>CV Exam:</b> JVP not elevated. Heart sounds: regular S1/S2, no murmurs, rubs, or gallops. No peripheral edema. Peripheral pulses palpable, equal bilaterally."},
       {id:"chest",phase:"Physical Exam",label:"Chest & respiratory exam",keywords:["chest","lung","respiratory","breath","auscultation","percussion"],response:"<b>Chest Exam:</b> Chest wall non-tender, no bruising or deformity. Lungs clear to auscultation bilaterally, equal air entry. No wheeze or crackles."}
     ],
@@ -263,12 +263,12 @@ const CASES = [
     desc:"35F with rash, dyspnea, and hypotension after antibiotics. Practice recognition and emergency management.",
     patientOpening:"Doctor, I don't feel good at all. I took some antibiotics for a UTI about 15 minutes ago, and now I have this horrible rash all over my body. It's so itchy. I'm having trouble breathing too — my throat feels tight. I feel dizzy and lightheaded.",
     history:[
-      {id:"onset2",phase:"History",label:"Onset & trigger",keywords:["when","start","antibiotic","amoxicillin","penicillin","allergy","allergic","what","take","medication","trigger"],response:"I took the amoxicillin about 15 minutes ago for my UTI. Almost right after, I started feeling weird — first the itching, then the rash came up, and now I can't breathe well."},
+      {id:"onset2",phase:"History",label:"Onset & trigger",keywords:["when","start","antibiotic","amoxicillin","penicillin","allergy","allergic","what","take","medication","trigger","what happened","happen","tell me","how","how long","why","sudden"],response:"I took the amoxicillin about 15 minutes ago for my UTI. Almost right after, I started feeling weird — first the itching, then the rash came up, and now I can't breathe well."},
       {id:"allergy_hx",phase:"History",label:"Allergy history",keywords:["allergy","past","before","reaction","previous","ever","happen"],response:"I've never had a reaction like this before. I've taken antibiotics in the past and was fine. No known drug allergies."},
       {id:"other_meds",phase:"History",label:"Other medications",keywords:["medication","drug","other","take","pill","regular","contraception"],response:"I'm not on any regular medications. Just oral contraceptives. I've been healthy otherwise."}
     ],
     staffExam:[
-      {id:"vitals_a",phase:"Physical Exam",label:"Vital signs",keywords:["vital","bp","hr","rr","sats","temp","pulse","blood pressure"],response:"<b>Vital Signs:</b> BP 85/50 mmHg, HR 120 bpm, RR 30/min, SpO₂ 91% on room air, Temp 37.1°C. Patient appears distressed, using accessory muscles."},
+      {id:"vitals_a",phase:"Physical Exam",label:"Vital signs",keywords:["vital","bp","hr","rr","sats","temp","pulse","blood pressure","numbers","reading","pressure","oxygen","saturation","rate","fever"],response:"<b>Vital Signs:</b> BP 85/50 mmHg, HR 120 bpm, RR 30/min, SpO₂ 91% on room air, Temp 37.1°C. Patient appears distressed, using accessory muscles."},
       {id:"skin",phase:"Physical Exam",label:"Skin & mucosal exam",keywords:["skin","rash","urticaria","hive","angioedema","lip","tongue","swelling","swollen","mucosal"],response:"<b>Skin/Mucosal:</b> Diffuse urticaria over trunk and limbs. Mild angioedema of lips. No tongue swelling compromising airway yet. Conjunctivae clear."},
       {id:"resp",phase:"Physical Exam",label:"Respiratory exam",keywords:["respiratory","chest","lung","wheeze","stridor","breath","auscultation","airway"],response:"<b>Respiratory:</b> Inspiratory stridor present. Bilateral expiratory wheezes. Using accessory muscles. Speaking in short phrases only."}
     ],
@@ -495,24 +495,17 @@ function sendMessage() {
   
   showTyping(currentRole, () => {
     if (match) {
-      if (match.item.id !== 'diff' && match.item.id !== 'mgmt') {
-        coveredItems.add(match.item.id);
-      } else {
-        coveredItems.add(match.item.id);
-      }
+      coveredItems.add(match.item.id);
       messages.push({type:'msg',role:match.type,text:match.response});
     } else {
-      const fallback = currentRole === 'patient' 
-        ? "I'm not sure what you mean, doctor. Can you ask that differently?"
-        : "I don't have that information yet — can you be more specific about what you're looking for?";
-      messages.push({type:'msg',role:currentRole,text:fallback});
+      const fb = getFallback(currentRole);
+      messages.push({type:'msg',role:currentRole,text:fb});
     }
     
     renderMessages();
     renderChecklist();
     saveCurrent();
     
-    // Check if all items covered
     if (coveredItems.size >= currentCase.checklistOrder.length) {
       setTimeout(() => showScore(), 800);
     }
@@ -522,6 +515,15 @@ function sendMessage() {
     document.getElementById('send-btn').disabled = false;
     input.focus();
   });
+}
+
+function getFallback(role) {
+  if (role !== 'patient') return "I don't have that information yet — can you be more specific about what you're looking for?";
+  const uncovered = currentCase.history.filter(h => !coveredItems.has(h.id));
+  if (uncovered.length === 0) return "I think we've covered my history, doctor. Maybe ask the Staff about the examination or test results?";
+  const hints = uncovered.map(h => `"${h.label}"`).slice(0, 3);
+  if (uncovered.length > 3) hints.push(`+${uncovered.length - 3} more`);
+  return `I'm not sure what you mean, doctor. You could try asking about: ${hints.join(', ')}`;
 }
 
 function showTyping(role, cb) {
